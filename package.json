@@ -1,0 +1,8 @@
+{
+  "name": "accesslens",
+  "version": "1.0.0",
+  "description": "Private, in-browser accessibility checker based on WCAG 2.2",
+  "scripts": { "test": "node test/run.mjs" },
+  "devDependencies": { "playwright": "^1.48.0" },
+  "license": "MIT"
+}

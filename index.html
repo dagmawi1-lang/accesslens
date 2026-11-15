@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AccessLens – private accessibility checker</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; form-action 'none'">
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="top">
+  <h1>AccessLens</h1>
+  <p class="tag">Find and fix accessibility problems in your web pages. <strong>Everything runs on your device. Nothing is uploaded.</strong></p>
+</header>
+
+<main id="main">
+  <section class="panel" aria-labelledby="in-h">
+    <h2 id="in-h">1. Add your page</h2>
+    <label for="html">Paste HTML</label>
+    <textarea id="html" rows="12" spellcheck="false" aria-describedby="html-help"></textarea>
+    <p id="html-help" class="help">Paste the source of a page (right-click → View page source → copy), or open an .html file.</p>
+    <div class="row">
+      <label class="file">Open .html file<input id="file" type="file" accept=".html,.htm,text/html"></label>
+      <button id="sample" type="button" class="secondary">Try a sample page</button>
+      <button id="run" type="button">Check accessibility</button>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="out-h" id="results" hidden>
+    <h2 id="out-h" tabindex="-1">2. Results</h2>
+    <div class="summary">
+      <div class="score" aria-live="polite"><span id="score">–</span><small>/100</small></div>
+      <ul class="counts">
+        <li><span class="dot critical" aria-hidden="true"></span><b id="c-critical">0</b> critical</li>
+        <li><span class="dot serious" aria-hidden="true"></span><b id="c-serious">0</b> serious</li>
+        <li><span class="dot moderate" aria-hidden="true"></span><b id="c-moderate">0</b> moderate</li>
+      </ul>
+    </div>
+    <fieldset class="filters">
+      <legend>Show</legend>
+      <label><input type="checkbox" name="sev" value="critical" checked> Critical</label>
+      <label><input type="checkbox" name="sev" value="serious" checked> Serious</label>
+      <label><input type="checkbox" name="sev" value="moderate" checked> Moderate</label>
+    </fieldset>
+    <ol id="issues" class="issues"></ol>
+    <p id="none" class="good" hidden>No issues found by the automated checks. Next, try the page with only a keyboard and with a screen reader.</p>
+    <div class="row">
+      <button id="export" type="button" class="secondary">Download report (.md)</button>
+      <button id="copy" type="button" class="secondary">Copy report</button>
+      <span id="status" role="status" class="help"></span>
+    </div>
+  </section>
+
+  <section class="panel note" aria-labelledby="about-h">
+    <h2 id="about-h">How it works</h2>
+    <p>AccessLens runs 12 checks based on WCAG 2.2 (images, labels, buttons, links, headings, contrast, language, focus order and more) in your browser. It makes no network requests, and its security policy blocks them, so private or unreleased pages stay private.</p>
+    <p>Automated tools catch only some problems. Use the report as a starting point, then test with a keyboard and a screen reader.</p>
+  </section>
+</main>
+<footer class="foot">AccessLens · built for NorCal Hacks 27 · open source</footer>
+<script src="src/checks.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>
