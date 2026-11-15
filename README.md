@@ -4,8 +4,6 @@
 
 Built for **NorCal Hacks 27** (Social Impact / Education).
 
-![AccessLens screenshot](docs/screenshot.png)
-
 ## The problem
 
 About 1 in 4 US adults has a disability, and most websites still have basic accessibility problems such as images without descriptions, form fields without labels, and text that is too faint to read. Student makers, clubs and small nonprofits often don't know what to check. Many online checkers also require you to upload your page or give a public URL, which doesn't work for private, unreleased or school-internal pages.
