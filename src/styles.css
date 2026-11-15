@@ -1,0 +1,35 @@
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1a1a1a;--muted:#555;--line:#d9d9d4;--accent:#1d4ed8;--crit:#b91c1c;--ser:#b45309;--mod:#4b5563;--ok:#166534}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:10}
+.top,main,.foot{max-width:860px;margin:0 auto;padding:0 20px}
+.top{padding-top:32px}
+h1{margin:0;font-size:30px}
+.tag{margin:6px 0 20px;color:var(--muted)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:18px}
+h2{margin:0 0 12px;font-size:20px}
+label{font-weight:600}
+textarea{width:100%;margin-top:6px;font:13px/1.45 ui-monospace,Consolas,monospace;padding:10px;border:1px solid #8a8a85;border-radius:8px}
+.help{color:var(--muted);font-size:14px;margin:6px 0 0}.help.warn{color:var(--crit);font-weight:600}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
+button,.file{font:600 15px system-ui,sans-serif;border-radius:8px;padding:9px 16px;border:2px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+button.secondary,.file{background:#fff;color:var(--accent)}
+.file input{position:absolute;opacity:0;width:1px;height:1px}
+.file:focus-within{outline:3px solid #f59e0b;outline-offset:2px}
+:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+.summary{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.score{font-size:46px;font-weight:800}.score small{font-size:18px;color:var(--muted)}
+.counts{list-style:none;padding:0;margin:0;display:flex;gap:18px;flex-wrap:wrap}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.dot.critical,.badge.critical{background:var(--crit)}.dot.serious,.badge.serious{background:var(--ser)}.dot.moderate,.badge.moderate{background:var(--mod)}
+.filters{border:0;padding:0;margin:16px 0 4px;display:flex;gap:16px}.filters legend{font-weight:600;float:left;margin-right:8px}
+.filters label{font-weight:400}
+.issues{padding-left:22px}
+.issue{border-left:4px solid var(--mod);padding:4px 0 4px 12px;margin:14px 0}
+.issue.critical{border-color:var(--crit)}.issue.serious{border-color:var(--ser)}
+.issue p{margin:2px 0}.msg{font-weight:600}.meta{color:var(--muted);font-size:14px}
+.badge{color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.04em;padding:1px 7px;border-radius:5px;margin-right:4px}
+pre{background:#f1f1ee;border-radius:6px;padding:8px;overflow:auto;font-size:13px;margin:6px 0 0}
+.good{color:var(--ok);font-weight:600}
+.note p{margin:0 0 8px}
+.foot{color:var(--muted);font-size:14px;padding-bottom:32px}
